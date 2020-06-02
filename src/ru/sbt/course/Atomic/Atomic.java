@@ -15,7 +15,7 @@ public class Atomic {
     public static void main(String[] args) {
         //Object mutex = new Object();
         ExecutorService executorService = Executors.newFixedThreadPool(3);
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 3; i++) {
             executorService.submit(() -> {
                // synchronized (mutex) {
                 if (flag.compareAndSet(true, false)) { //пробуем переключить в false, предполагая, что был true
